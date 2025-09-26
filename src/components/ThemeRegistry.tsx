@@ -7,10 +7,10 @@ const theme = createTheme({
     mode: "light",
     primary: { main: "#24484E" },
     secondary: { main: "#f57c00" },
-    background: {
-      default: "#f8fafc",
-      paper: "#ffffff",
-    },
+        background: {
+          default: "#7E9CC",
+          paper: "#7E9CC",
+        },
   },
   typography: {
     fontFamily: '"Inter", "Roboto", "Helvetica", "Arial", sans-serif',
