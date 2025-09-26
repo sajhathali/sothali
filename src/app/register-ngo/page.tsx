@@ -456,7 +456,7 @@ export default function RegisterNGOPage() {
                       const files = (e.target as HTMLInputElement).files;
                       onChange(files ? files[0] : null);
                     }}
-                    helperText="Upload Aadhaar/PAN of contact person (PDF, JPG, PNG)"
+                    helperText="Upload Aadhaar/PAN of contact person (PDF, JPG)"
                   />
                 )}
               />
