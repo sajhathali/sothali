@@ -67,13 +67,7 @@ export default function InitiativePage() {
       </Box>
 
       <Box sx={{ mt: 6, textAlign: "center", py: 3, bgcolor: "primary.main", color: "white", borderRadius: 2 }}>
-        <Typography variant="h5" sx={{ fontWeight: 600, fontStyle: "italic" }}>
-          Khushiyan Baantien, Bhookh Mitaayen
-        </Typography>
-        <Typography variant="body2" sx={{ mt: 1, opacity: 0.9 }}>
-          Share Happiness, Eliminate Hunger
-        </Typography>
-        <Typography variant="body1" sx={{ mt: 2, fontStyle: "italic", opacity: 0.95 }}>
+        <Typography variant="h5" sx={{ fontWeight: 600 }}>
           Every meal shared is a step towards a more compassionate world where no one sleeps hungry.
         </Typography>
       </Box>
