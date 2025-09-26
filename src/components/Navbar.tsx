@@ -11,6 +11,7 @@ const links = [
   { href: "/donation", label: "Donation" },
   { href: "/register-ngo", label: "Register Your NGO" },
   { href: "/reviews", label: "What People Say" },
+  { href: "/initiative", label: "Initiative" },
   { href: "/contact", label: "Contact Details" },
 ];
 
