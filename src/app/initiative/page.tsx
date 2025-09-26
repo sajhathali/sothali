@@ -64,9 +64,6 @@ export default function InitiativePage() {
         <Typography paragraph>
           Be part of this mission. Whether you are an individual, a restaurant, or an event organizer, your small contribution can bring a smile to many faces. Together, let&apos;s ensure <strong>No Food Waste, No Empty Plates</strong>.
         </Typography>
-        <Typography paragraph sx={{ fontStyle: "italic", color: "text.secondary" }}>
-          Every meal shared is a step towards a more compassionate world where no one sleeps hungry.
-        </Typography>
       </Box>
 
       <Box sx={{ mt: 6, textAlign: "center", py: 3, bgcolor: "primary.main", color: "white", borderRadius: 2 }}>
@@ -75,6 +72,9 @@ export default function InitiativePage() {
         </Typography>
         <Typography variant="body2" sx={{ mt: 1, opacity: 0.9 }}>
           Share Happiness, Eliminate Hunger
+        </Typography>
+        <Typography variant="body1" sx={{ mt: 2, fontStyle: "italic", opacity: 0.95 }}>
+          Every meal shared is a step towards a more compassionate world where no one sleeps hungry.
         </Typography>
       </Box>
     </MainContainer>
