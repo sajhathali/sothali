@@ -1,4 +1,4 @@
-import { Container, Typography, Paper, Grid } from "@mui/material";
+import { Container, Typography, Paper, Box } from "@mui/material";
 
 const samples = [
   { name: "Priya Sharma", role: "Donor", text: "I donated leftover wedding food within hours. A noble initiative to reduce waste.", rating: 5 },
@@ -13,18 +13,18 @@ export default function ReviewsPage() {
       <Typography variant="h3" gutterBottom>
         What People Say
       </Typography>
-      <Grid container spacing={2}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
         {samples.map((s) => (
-          <Grid item xs={12} sm={6} md={3} key={s.name}>
+          <Box key={s.name} sx={{ flex: { xs: "1 1 100%", sm: "1 1 calc(50% - 8px)", md: "1 1 calc(25% - 12px)" }, minWidth: 0 }}>
             <Paper sx={{ p: 2, height: "100%" }}>
               <Typography variant="subtitle1" fontWeight={600}>{s.name}</Typography>
               <Typography variant="caption" color="text.secondary">{s.role}</Typography>
               <Typography sx={{ my: 1 }}>{s.text}</Typography>
               <Typography>Rating: {"★".repeat(s.rating)}{"☆".repeat(5 - s.rating)}</Typography>
             </Paper>
-          </Grid>
+          </Box>
         ))}
-      </Grid>
+      </Box>
     </Container>
   );
 }
