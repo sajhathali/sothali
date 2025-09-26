@@ -1,12 +1,13 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { AppBar, Toolbar, Typography, IconButton, Box, Button, Drawer, List, ListItem, ListItemButton, ListItemText } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About/Initiative" },
+  { href: "/about", label: "About" },
   { href: "/donation", label: "Donation" },
   { href: "/register-ngo", label: "Register Your NGO" },
   { href: "/reviews", label: "What People Say" },
@@ -18,9 +19,11 @@ export default function Navbar() {
   return (
     <AppBar position="fixed" color="primary">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Typography variant="h6" component={Link} href="/" style={{ textDecoration: "none", color: "inherit" }}>
-          Sajhathali
-        </Typography>
+        <Box component={Link} href="/" sx={{ display: "flex", alignItems: "center", textDecoration: "none", color: "inherit" }}>
+          <Typography variant="h6" sx={{ fontWeight: 700, letterSpacing: 1 }}>
+            🥘 SajhaThali
+          </Typography>
+        </Box>
 
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
           {links.map((l) => (

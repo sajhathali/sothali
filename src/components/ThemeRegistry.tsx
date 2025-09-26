@@ -5,7 +5,7 @@ import { ReactNode } from "react";
 const theme = createTheme({
   palette: {
     mode: "light",
-    primary: { main: "#2e7d32" },
+    primary: { main: "#24484E" },
     secondary: { main: "#f57c00" },
   },
 });
