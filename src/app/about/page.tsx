@@ -59,7 +59,7 @@ export default function AboutPage() {
           Join Us
         </Typography>
         <Typography paragraph>
-          Whether you're a donor, an NGO, or just someone who believes in kindness — this platform is for you. Together, we can make a difference, one meal at a time.
+          Whether you&apos;re a donor, an NGO, or just someone who believes in kindness — this platform is for you. Together, we can make a difference, one meal at a time.
         </Typography>
       </Box>
 
