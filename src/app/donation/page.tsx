@@ -1,5 +1,5 @@
 "use client";
-import { Typography, Paper, Box, TextField, FormControl, InputLabel, Select, MenuItem, Checkbox, FormControlLabel, Button, Grid, Chip, OutlinedInput, Switch, Alert } from "@mui/material";
+import { Typography, Paper, Box, TextField, FormControl, InputLabel, Select, MenuItem, Checkbox, FormControlLabel, Button, Chip, OutlinedInput, Switch, Alert } from "@mui/material";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
@@ -82,8 +82,8 @@ export default function DonationPage() {
               1. Donor Information
             </Typography>
             
-            <Grid container spacing={3} sx={{ mb: 4 }}>
-              <Grid item xs={12} sm={6}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 3 }}>
                 <Controller
                   name="fullName"
                   control={control}
@@ -97,9 +97,7 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
-              
-              <Grid item xs={12} sm={6}>
+                
                 <Controller
                   name="phone"
                   control={control}
@@ -117,9 +115,9 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
+              </Box>
               
-              <Grid item xs={12} sm={6}>
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 3 }}>
                 <Controller
                   name="email"
                   control={control}
@@ -134,9 +132,7 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
-              
-              <Grid item xs={12} sm={6}>
+                
                 <Controller
                   name="aadhaar"
                   control={control}
@@ -151,28 +147,26 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
+              </Box>
               
-              <Grid item xs={12}>
-                <Controller
-                  name="address"
-                  control={control}
-                  render={({ field }) => (
-                    <TextField
-                      {...field}
-                      fullWidth
-                      multiline
-                      rows={3}
-                      label="Address / Pickup Location"
-                      placeholder="Enter complete pickup address"
-                      error={!!errors.address}
-                      helperText={errors.address?.message || "Google Maps integration will be added later"}
-                    />
-                  )}
-                />
-              </Grid>
+              <Controller
+                name="address"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    fullWidth
+                    multiline
+                    rows={3}
+                    label="Address / Pickup Location"
+                    placeholder="Enter complete pickup address"
+                    error={!!errors.address}
+                    helperText={errors.address?.message || "Google Maps integration will be added later"}
+                  />
+                )}
+              />
               
-              <Grid item xs={12} sm={6}>
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 3 }}>
                 <Controller
                   name="city"
                   control={control}
@@ -186,9 +180,7 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
-              
-              <Grid item xs={12} sm={6}>
+                
                 <Controller
                   name="pincode"
                   control={control}
@@ -203,16 +195,16 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
 
             {/* Food Details */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
               2. Food Details
             </Typography>
             
-            <Grid container spacing={3} sx={{ mb: 4 }}>
-              <Grid item xs={12} sm={6}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 3 }}>
                 <FormControl fullWidth error={!!errors.foodTypes}>
                   <InputLabel>Type of Food</InputLabel>
                   <Select
@@ -240,9 +232,7 @@ export default function DonationPage() {
                     </Typography>
                   )}
                 </FormControl>
-              </Grid>
-              
-              <Grid item xs={12} sm={6}>
+                
                 <Controller
                   name="numberOfItems"
                   control={control}
@@ -258,28 +248,26 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
+              </Box>
               
-              <Grid item xs={12}>
-                <Controller
-                  name="foodDescription"
-                  control={control}
-                  render={({ field }) => (
-                    <TextField
-                      {...field}
-                      fullWidth
-                      multiline
-                      rows={3}
-                      label="Food Description"
-                      placeholder="e.g., Rice, Dal, Chapati, Sabji, etc."
-                      error={!!errors.foodDescription}
-                      helperText={errors.foodDescription?.message}
-                    />
-                  )}
-                />
-              </Grid>
+              <Controller
+                name="foodDescription"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    fullWidth
+                    multiline
+                    rows={3}
+                    label="Food Description"
+                    placeholder="e.g., Rice, Dal, Chapati, Sabji, etc."
+                    error={!!errors.foodDescription}
+                    helperText={errors.foodDescription?.message}
+                  />
+                )}
+              />
               
-              <Grid item xs={12} sm={6}>
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 3 }}>
                 <Controller
                   name="quantityServings"
                   control={control}
@@ -296,9 +284,7 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
-              
-              <Grid item xs={12} sm={6}>
+                
                 <Controller
                   name="preparationDateTime"
                   control={control}
@@ -315,34 +301,32 @@ export default function DonationPage() {
                     />
                   )}
                 />
-              </Grid>
+              </Box>
               
-              <Grid item xs={12} sm={6}>
-                <Controller
-                  name="expiryDateTime"
-                  control={control}
-                  render={({ field }) => (
-                    <DateTimePicker
-                      {...field}
-                      label="Expiry / Safe Consumption Time"
-                      slotProps={{
-                        textField: {
-                          fullWidth: true,
-                        }
-                      }}
-                    />
-                  )}
-                />
-              </Grid>
-            </Grid>
+              <Controller
+                name="expiryDateTime"
+                control={control}
+                render={({ field }) => (
+                  <DateTimePicker
+                    {...field}
+                    label="Expiry / Safe Consumption Time"
+                    slotProps={{
+                      textField: {
+                        fullWidth: true,
+                      }
+                    }}
+                  />
+                )}
+              />
+            </Box>
 
             {/* Logistics */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
               3. Logistics
             </Typography>
             
-            <Grid container spacing={3} sx={{ mb: 4 }}>
-              <Grid item xs={12} sm={6}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
+              <Box sx={{ display: 'flex', flexDirection: { xs: 'column', sm: 'row' }, gap: 3, alignItems: { sm: 'center' } }}>
                 <Controller
                   name="preferredPickupTime"
                   control={control}
@@ -364,9 +348,7 @@ export default function DonationPage() {
                     </FormControl>
                   )}
                 />
-              </Grid>
-              
-              <Grid item xs={12} sm={6}>
+                
                 <Controller
                   name="deliveryPossible"
                   control={control}
@@ -374,59 +356,55 @@ export default function DonationPage() {
                     <FormControlLabel
                       control={<Switch {...field} checked={field.value} />}
                       label="Is Delivery Possible by Donor?"
-                      sx={{ mt: 1 }}
+                      sx={{ minWidth: 'fit-content' }}
                     />
                   )}
                 />
-              </Grid>
+              </Box>
               
-              <Grid item xs={12}>
-                <Controller
-                  name="specialInstructions"
-                  control={control}
-                  render={({ field }) => (
-                    <TextField
-                      {...field}
-                      fullWidth
-                      multiline
-                      rows={3}
-                      label="Special Instructions (Optional)"
-                      placeholder="e.g., packed in containers, needs refrigeration, etc."
-                    />
-                  )}
-                />
-              </Grid>
-            </Grid>
+              <Controller
+                name="specialInstructions"
+                control={control}
+                render={({ field }) => (
+                  <TextField
+                    {...field}
+                    fullWidth
+                    multiline
+                    rows={3}
+                    label="Special Instructions (Optional)"
+                    placeholder="e.g., packed in containers, needs refrigeration, etc."
+                  />
+                )}
+              />
+            </Box>
 
             {/* Verification & Consent */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
               4. Verification & Consent
             </Typography>
             
-            <Grid container spacing={3} sx={{ mb: 4 }}>
-              <Grid item xs={12}>
-                <Controller
-                  name="photoFile"
-                  control={control}
-                  render={({ field: { onChange, ...field } }) => (
-                    <TextField
-                      {...field}
-                      fullWidth
-                      type="file"
-                      label="Photo Upload"
-                      InputLabelProps={{ shrink: true }}
-                      inputProps={{ accept: "image/*" }}
-                      onChange={(e) => {
-                        const files = (e.target as HTMLInputElement).files;
-                        onChange(files ? files[0] : null);
-                      }}
-                      helperText="Upload image of packed food (helps NGOs assess quality)"
-                    />
-                  )}
-                />
-              </Grid>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
+              <Controller
+                name="photoFile"
+                control={control}
+                render={({ field: { onChange, ...field } }) => (
+                  <TextField
+                    {...field}
+                    fullWidth
+                    type="file"
+                    label="Photo Upload"
+                    InputLabelProps={{ shrink: true }}
+                    inputProps={{ accept: "image/*" }}
+                    onChange={(e) => {
+                      const files = (e.target as HTMLInputElement).files;
+                      onChange(files ? files[0] : null);
+                    }}
+                    helperText="Upload image of packed food (helps NGOs assess quality)"
+                  />
+                )}
+              />
               
-              <Grid item xs={12}>
+              <Box>
                 <Controller
                   name="safetyConfirm"
                   control={control}
@@ -448,9 +426,9 @@ export default function DonationPage() {
                     {errors.safetyConfirm.message}
                   </Typography>
                 )}
-              </Grid>
+              </Box>
               
-              <Grid item xs={12}>
+              <Box>
                 <Controller
                   name="termsAccept"
                   control={control}
@@ -472,8 +450,8 @@ export default function DonationPage() {
                     {errors.termsAccept.message}
                   </Typography>
                 )}
-              </Grid>
-            </Grid>
+              </Box>
+            </Box>
 
             {/* Submit Button */}
             <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
