@@ -1,5 +1,4 @@
-import { Container, Typography, Paper } from "@mui/material";
-import Grid from "@mui/material/Unstable_Grid2";
+import { Container, Typography, Paper, Grid } from "@mui/material";
 
 const samples = [
   { name: "Priya Sharma", role: "Donor", text: "I donated leftover wedding food within hours. A noble initiative to reduce waste.", rating: 5 },
@@ -16,7 +15,7 @@ export default function ReviewsPage() {
       </Typography>
       <Grid container spacing={2}>
         {samples.map((s) => (
-          <Grid xs={12} sm={6} md={3} key={s.name}>
+          <Grid item xs={12} sm={6} md={3} key={s.name}>
             <Paper sx={{ p: 2, height: "100%" }}>
               <Typography variant="subtitle1" fontWeight={600}>{s.name}</Typography>
               <Typography variant="caption" color="text.secondary">{s.role}</Typography>
