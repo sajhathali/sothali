@@ -86,7 +86,6 @@ export default function Home() {
             Learn More
           </Button>
         </Stack>
-      </Box>
     </Box>
   );
 }
