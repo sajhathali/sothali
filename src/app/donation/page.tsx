@@ -62,7 +62,7 @@ export default function DonationPage() {
     setSubmitStatus("Form submitted successfully! (Frontend only - no backend integration yet)");
   };
 
-  const handleFoodTypeChange = (event: any) => {
+  const handleFoodTypeChange = (event: { target: { value: string | string[] } }) => {
     const value = event.target.value;
     setSelectedFoodTypes(typeof value === 'string' ? value.split(',') : value);
     setValue('foodTypes', typeof value === 'string' ? value.split(',') : value);
@@ -408,7 +408,7 @@ export default function DonationPage() {
                 <Controller
                   name="photoFile"
                   control={control}
-                  render={({ field: { onChange, value, ...field } }) => (
+                  render={({ field: { onChange, ...field } }) => (
                     <TextField
                       {...field}
                       fullWidth
