@@ -1,8 +1,9 @@
-import { Container, Typography, Box } from "@mui/material";
+import { Typography, Box } from "@mui/material";
+import MainContainer from "@/components/MainContainer";
 
 export default function AboutPage() {
   return (
-    <Container sx={{ py: 6, maxWidth: "md" }}>
+    <MainContainer maxWidth="md">
       <Typography variant="h3" gutterBottom sx={{ display: "flex", alignItems: "center", gap: 1 }}>
         🥘 About Us
       </Typography>
@@ -68,7 +69,7 @@ export default function AboutPage() {
           Khushiyan Baantien, Bhookh Mitaayen
         </Typography>
       </Box>
-    </Container>
+    </MainContainer>
   );
 }
 
