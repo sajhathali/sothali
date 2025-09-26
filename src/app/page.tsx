@@ -1,33 +1,35 @@
 import { Typography, Button, Stack, Box } from "@mui/material";
-import MainContainer from "@/components/MainContainer";
 
 export default function Home() {
   return (
-    <MainContainer>
-      <Box 
-        sx={{ 
-          textAlign: "center", 
-          minHeight: "calc(100vh - 200px)",
-          display: "flex", 
-          flexDirection: "column", 
-          justifyContent: "center",
-          position: "relative",
-          backgroundImage: "url(/images/banner.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            top: 0,
-            left: 0,
-            right: 0,
-            bottom: 0,
-            backgroundColor: "rgba(237, 224, 212, 0.5)", // 50% transparency overlay with app background color
-            zIndex: 1,
-          }
-        }}
-      >
+    <Box 
+      sx={{ 
+        textAlign: "center", 
+        minHeight: "100vh",
+        display: "flex", 
+        flexDirection: "column", 
+        justifyContent: "center",
+        position: "relative",
+        backgroundImage: "url(/images/banner.jpg)",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        margin: 0,
+        padding: 0,
+        width: "100vw",
+        marginLeft: "calc(-50vw + 50%)",
+        "&::before": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: "rgba(237, 224, 212, 0.5)", // 50% transparency overlay with app background color
+          zIndex: 1,
+        }
+      }}
+    >
         <Typography 
           variant="h2" 
           gutterBottom 
@@ -85,6 +87,6 @@ export default function Home() {
           </Button>
         </Stack>
       </Box>
-    </MainContainer>
+    </Box>
   );
 }
