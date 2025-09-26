@@ -1,4 +1,5 @@
-import { Container, Typography, Paper, Box } from "@mui/material";
+import { Typography, Paper, Box } from "@mui/material";
+import MainContainer from "@/components/MainContainer";
 
 const samples = [
   { name: "Priya Sharma", role: "Donor", text: "I donated leftover wedding food within hours. A noble initiative to reduce waste.", rating: 5 },
@@ -9,11 +10,11 @@ const samples = [
 
 export default function ReviewsPage() {
   return (
-    <Container sx={{ py: 6 }}>
+    <MainContainer>
       <Typography variant="h3" gutterBottom>
         What People Say
       </Typography>
-      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 2, mt: 2 }}>
         {samples.map((s) => (
           <Box key={s.name} sx={{ flex: { xs: "1 1 100%", sm: "1 1 calc(50% - 8px)", md: "1 1 calc(25% - 12px)" }, minWidth: 0 }}>
             <Paper sx={{ p: 2, height: "100%" }}>
@@ -25,7 +26,7 @@ export default function ReviewsPage() {
           </Box>
         ))}
       </Box>
-    </Container>
+    </MainContainer>
   );
 }
 

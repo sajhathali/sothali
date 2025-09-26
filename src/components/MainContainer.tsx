@@ -1,5 +1,5 @@
 "use client";
-import { Container, Box } from "@mui/material";
+import { Box } from "@mui/material";
 import { ReactNode } from "react";
 
 interface MainContainerProps {
@@ -7,36 +7,46 @@ interface MainContainerProps {
   maxWidth?: "sm" | "md" | "lg" | "xl";
 }
 
-export default function MainContainer({ children, maxWidth = "lg" }: MainContainerProps) {
+export default function MainContainer({ children }: MainContainerProps) {
   return (
-    <Container 
-      maxWidth={maxWidth}
-      sx={{ 
-        py: { xs: 4, md: 6 },
-        px: { xs: 2, md: 4 },
-        minHeight: "calc(100vh - 64px)",
+    <Box
+      sx={{
+        minHeight: "100vh",
+        bgcolor: "background.default",
+        pt: "64px", // Account for fixed navbar
         display: "flex",
-        flexDirection: "column",
-        justifyContent: "flex-start",
+        justifyContent: "center",
+        alignItems: "center",
+        px: { xs: 2, md: 4 },
+        py: { xs: 2, md: 4 },
       }}
     >
       <Box
         sx={{
           width: "100%",
-          maxWidth: { xs: "100%", md: "1200px" },
-          mx: "auto",
+          maxWidth: "1200px",
           aspectRatio: { xs: "auto", md: "16/9" },
+          height: { xs: "auto", md: "calc(100vh - 128px)" }, // Full height minus navbar and padding
           display: "flex",
           flexDirection: "column",
           bgcolor: "background.paper",
           borderRadius: { xs: 0, md: 2 },
-          boxShadow: { xs: 0, md: 2 },
-          p: { xs: 2, md: 4 },
-          overflow: "auto",
+          boxShadow: { xs: 0, md: 3 },
+          overflow: "hidden",
         }}
       >
-        {children}
+        <Box
+          sx={{
+            flex: 1,
+            p: { xs: 3, md: 4 },
+            overflow: "auto",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {children}
+        </Box>
       </Box>
-    </Container>
+    </Box>
   );
 }

@@ -1,12 +1,13 @@
-import { Container, Typography, Paper, Box } from "@mui/material";
+import { Typography, Paper, Box } from "@mui/material";
+import MainContainer from "@/components/MainContainer";
 
 export default function ContactPage() {
   return (
-    <Container sx={{ py: 6 }}>
+    <MainContainer>
       <Typography variant="h3" gutterBottom>
         Contact Details
       </Typography>
-      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 2 }}>
+      <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 2, mt: 2 }}>
         <Box sx={{ flex: 1 }}>
           <Paper sx={{ p: 2 }}>
             <Typography>HOD Office, CSE Department, MIT College, Beed Bypass Road, Chh. Sambhajinagar, Maharashtra - 431010</Typography>
@@ -20,7 +21,7 @@ export default function ContactPage() {
           </Paper>
         </Box>
       </Box>
-    </Container>
+    </MainContainer>
   );
 }
 

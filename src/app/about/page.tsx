@@ -3,7 +3,7 @@ import MainContainer from "@/components/MainContainer";
 
 export default function AboutPage() {
   return (
-    <MainContainer maxWidth="md">
+    <MainContainer>
       <Typography variant="h3" gutterBottom sx={{ display: "flex", alignItems: "center", gap: 1 }}>
         🥘 About Us
       </Typography>

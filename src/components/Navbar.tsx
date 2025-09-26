@@ -17,8 +17,9 @@ const links = [
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   return (
-    <AppBar position="fixed" color="primary">
-      <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+    <AppBar position="fixed" color="primary" sx={{ zIndex: 1201 }}>
+      <Box sx={{ maxWidth: "1200px", mx: "auto", width: "100%" }}>
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between", px: { xs: 2, md: 0 } }}>
         <Box component={Link} href="/" sx={{ display: "flex", alignItems: "center", textDecoration: "none" }}>
           <Image
             src="/images/logo.png"
@@ -53,7 +54,8 @@ export default function Navbar() {
             </List>
           </Box>
         </Drawer>
-      </Toolbar>
+        </Toolbar>
+      </Box>
     </AppBar>
   );
 }
