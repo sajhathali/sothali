@@ -5,7 +5,7 @@ export default function ContactPage() {
   return (
     <MainContainer>
       <Typography variant="h3" gutterBottom>
-        Contact Details
+        Contact Us
       </Typography>
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 2 }}>
         <Box sx={{ width: "100%" }}>

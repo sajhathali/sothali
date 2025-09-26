@@ -12,7 +12,7 @@ const links = [
   { href: "/register-ngo", label: "Register Your NGO" },
   { href: "/reviews", label: "What People Say" },
   { href: "/initiative", label: "Initiative" },
-  { href: "/contact", label: "Contact Details" },
+  { href: "/contact", label: "Contact Us" },
 ];
 
 export default function Navbar() {
