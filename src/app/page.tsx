@@ -4,7 +4,15 @@ import MainContainer from "@/components/MainContainer";
 export default function Home() {
   return (
     <MainContainer>
-      <Box sx={{ textAlign: "center", flex: 1, display: "flex", flexDirection: "column", justifyContent: "center" }}>
+      <Box 
+        sx={{ 
+          textAlign: "center", 
+          minHeight: "calc(100vh - 200px)",
+          display: "flex", 
+          flexDirection: "column", 
+          justifyContent: "center" 
+        }}
+      >
         <Typography variant="h2" gutterBottom sx={{ fontWeight: 700, color: "primary.main" }}>
           Transform Waste into Meals
         </Typography>

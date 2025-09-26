@@ -11,41 +11,22 @@ export default function MainContainer({ children }: MainContainerProps) {
   return (
     <Box
       sx={{
-        minHeight: "100vh",
+        minHeight: "calc(100vh - 64px)", // Full height minus navbar
         bgcolor: "background.default",
         pt: "64px", // Account for fixed navbar
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        px: { xs: 2, md: 4 },
-        py: { xs: 2, md: 4 },
+        px: { xs: 2, md: 0 },
       }}
     >
       <Box
         sx={{
           width: "100%",
           maxWidth: "1200px",
-          aspectRatio: { xs: "auto", md: "16/9" },
-          height: { xs: "auto", md: "calc(100vh - 128px)" }, // Full height minus navbar and padding
-          display: "flex",
-          flexDirection: "column",
-          bgcolor: "background.paper",
-          borderRadius: { xs: 0, md: 2 },
-          boxShadow: { xs: 0, md: 3 },
-          overflow: "hidden",
+          mx: "auto",
+          py: { xs: 3, md: 4 },
+          px: { xs: 0, md: 4 },
         }}
       >
-        <Box
-          sx={{
-            flex: 1,
-            p: { xs: 3, md: 4 },
-            overflow: "auto",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          {children}
-        </Box>
+        {children}
       </Box>
     </Box>
   );
