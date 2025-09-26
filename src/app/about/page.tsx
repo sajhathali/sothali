@@ -69,6 +69,62 @@ export default function AboutPage() {
           Khushiyan Baantien, Bhookh Mitaayen
         </Typography>
       </Box>
+
+      {/* Additional Initiative Content */}
+      <Box sx={{ mt: 6 }}>
+        <Typography variant="h3" gutterBottom sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+          🌱 Our Initiative
+        </Typography>
+        <Typography paragraph>
+          Every day, millions of people go hungry while tons of food is wasted at homes, restaurants, and events. Our initiative aims to bridge this gap by connecting food donors with NGOs and Ashrams that serve people in need.
+        </Typography>
+      </Box>
+
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="h4" gutterBottom color="primary" sx={{ fontWeight: 600, display: "flex", alignItems: "center", gap: 1 }}>
+          🎯 What We Do
+        </Typography>
+        <Box component="ul" sx={{ pl: 2 }}>
+          <Typography component="li" paragraph>
+            <strong>Collect Surplus Food</strong> – Donors can easily share details of leftover food through our platform.
+          </Typography>
+          <Typography component="li" paragraph>
+            <strong>Connect with NGOs</strong> – Registered NGOs receive notifications and arrange pickups.
+          </Typography>
+          <Typography component="li" paragraph>
+            <strong>Ensure Safe Distribution</strong> – Food reaches the needy in a safe, timely, and organized way.
+          </Typography>
+          <Typography component="li" paragraph>
+            <strong>Promote Awareness</strong> – Spreading the message: &quot;Food is not waste, it&apos;s a blessing to share.&quot;
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="h4" gutterBottom color="primary" sx={{ fontWeight: 600, display: "flex", alignItems: "center", gap: 1 }}>
+          🤝 Why It Matters
+        </Typography>
+        <Box component="ul" sx={{ pl: 2 }}>
+          <Typography component="li" paragraph>
+            Reduces food wastage.
+          </Typography>
+          <Typography component="li" paragraph>
+            Supports NGOs and Ashrams in feeding communities.
+          </Typography>
+          <Typography component="li" paragraph>
+            Helps achieve the dream of a Hunger-Free Society.
+          </Typography>
+        </Box>
+      </Box>
+
+      <Box sx={{ mt: 4, mb: 4 }}>
+        <Typography variant="h4" gutterBottom color="primary" sx={{ fontWeight: 600, display: "flex", alignItems: "center", gap: 1 }}>
+          🚀 Join the Movement
+        </Typography>
+        <Typography paragraph>
+          Be part of this mission. Whether you are an individual, a restaurant, or an event organizer, your small contribution can bring a smile to many faces. Together, let&apos;s ensure <strong>No Food Waste, No Empty Plates</strong>.
+        </Typography>
+      </Box>
     </MainContainer>
   );
 }
