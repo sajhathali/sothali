@@ -20,8 +20,15 @@ export default function Navbar() {
     <AppBar position="fixed" color="primary">
       <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
         <Box component={Link} href="/" sx={{ display: "flex", alignItems: "center", textDecoration: "none", color: "inherit" }}>
+          <Image
+            src="/images/logo.png"
+            alt="SajhaThali Logo"
+            width={40}
+            height={40}
+            style={{ marginRight: 8 }}
+          />
           <Typography variant="h6" sx={{ fontWeight: 700, letterSpacing: 1 }}>
-            🥘 SajhaThali
+            SajhaThali
           </Typography>
         </Box>
 
