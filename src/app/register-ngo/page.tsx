@@ -105,7 +105,7 @@ export default function RegisterNGOPage() {
           <form onSubmit={handleSubmit(onSubmit)}>
             {/* Organization Information */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Organization Information
+              1. Organization Information
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
@@ -205,7 +205,7 @@ export default function RegisterNGOPage() {
 
             {/* Contact Details */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Contact Details
+              2. Contact Details
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
@@ -278,7 +278,7 @@ export default function RegisterNGOPage() {
 
             {/* Location */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Location
+              3. Location
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
@@ -355,7 +355,7 @@ export default function RegisterNGOPage() {
 
             {/* Operational Details */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Operational Details
+              4. Operational Details
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
@@ -437,7 +437,7 @@ export default function RegisterNGOPage() {
 
             {/* Verification & Consent */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Verification & Consent
+              5. Verification & Consent
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
