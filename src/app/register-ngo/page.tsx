@@ -103,9 +103,9 @@ export default function RegisterNGOPage() {
       <Paper sx={{ p: 4, mt: 2 }}>
         <LocalizationProvider dateAdapter={AdapterDateFns}>
           <form onSubmit={handleSubmit(onSubmit)}>
-            {/* Section 1: Organization Information */}
+            {/* Organization Information */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Section 1: Organization Information
+              📌 Organization Information
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
@@ -203,9 +203,9 @@ export default function RegisterNGOPage() {
               />
             </Box>
 
-            {/* Section 2: Contact Details */}
+            {/* Contact Details */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Section 2: Contact Details
+              📌 Contact Details
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
@@ -276,9 +276,9 @@ export default function RegisterNGOPage() {
               </Box>
             </Box>
 
-            {/* Section 3: Location */}
+            {/* Location */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Section 3: Location
+              📌 Location
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
@@ -353,9 +353,9 @@ export default function RegisterNGOPage() {
               </Box>
             </Box>
 
-            {/* Section 4: Operational Details */}
+            {/* Operational Details */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Section 4: Operational Details
+              📌 Operational Details
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>
@@ -435,9 +435,9 @@ export default function RegisterNGOPage() {
               </Box>
             </Box>
 
-            {/* Section 5: Verification & Consent */}
+            {/* Verification & Consent */}
             <Typography variant="h5" gutterBottom color="primary" sx={{ fontWeight: 600, mb: 3 }}>
-              📌 Section 5: Verification & Consent
+              📌 Verification & Consent
             </Typography>
             
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, mb: 4 }}>

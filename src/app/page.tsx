@@ -14,10 +14,10 @@ export default function Home() {
         }}
       >
         <Typography variant="h2" gutterBottom sx={{ fontWeight: 700, color: "primary.main" }}>
-          Transform Waste into Meals
+          What&apos;s Extra for You Can Be Everything for Someone
         </Typography>
         <Typography variant="h5" color="text.secondary" sx={{ mb: 4, maxWidth: 600, mx: "auto" }}>
-          Connecting donors with NGOs and Ashrams to fight hunger through technology and compassion.
+          Connecting food donors with NGOs and Ashrams to ensure no plate goes empty
         </Typography>
         <Stack direction={{ xs: "column", sm: "row" }} spacing={3} sx={{ justifyContent: "center", alignItems: "center" }}>
           <Button 
