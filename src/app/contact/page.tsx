@@ -1,4 +1,5 @@
-import { Container, Typography, Grid, Paper } from "@mui/material";
+import { Container, Typography, Paper } from "@mui/material";
+import Grid from "@mui/material/Grid2";
 
 export default function ContactPage() {
   return (
@@ -7,14 +8,14 @@ export default function ContactPage() {
         Contact Details
       </Typography>
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           <Paper sx={{ p: 2 }}>
             <Typography>HOD Office, CSE Department, MIT College, Beed Bypass Road, Chh. Sambhajinagar, Maharashtra - 431010</Typography>
             <Typography sx={{ mt: 1 }}>Phone: +91 93736 75683, +91 99756 22079</Typography>
             <Typography>Email: sajhathali@gmail.com, support@sajhathali.com</Typography>
           </Paper>
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid xs={12} md={6}>
           <Paper sx={{ p: 2 }}>
             <Typography>Inquiry form placeholder. Google Maps embed will appear here.</Typography>
           </Paper>
