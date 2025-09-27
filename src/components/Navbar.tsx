@@ -56,7 +56,7 @@ export default function Navbar() {
           ))}
         </Box>
 
-        <IconButton sx={{ display: { xs: "inline-flex", md: "none" } }} color="inherit" onClick={() => setOpen(true)} aria-label="open navigation">
+        <IconButton sx={{ display: { xs: "inline-flex", md: "none" } }} color="inherit" onClick={() => setOpen(!open)} aria-label="toggle navigation">
           <MenuIcon />
         </IconButton>
         <Drawer anchor="right" open={open} onClose={() => setOpen(false)}>
