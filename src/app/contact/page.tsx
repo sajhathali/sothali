@@ -10,8 +10,10 @@ export default function ContactPage() {
       <Box sx={{ display: "flex", flexDirection: "column", gap: 2, mt: 2 }}>
         <Box sx={{ width: "100%" }}>
           <Paper sx={{ p: 2 }}>
-            <Typography>HOD Office, CSE Department, MIT College, Beed Bypass Road, Chh. Sambhajinagar, Maharashtra - 431010</Typography>
-            <Typography sx={{ mt: 1 }}>Phone: +91 93736 75683, +91 99756 22079</Typography>
+            <Typography>CSD Department, MIT College, Beed Bypass Road, Chh. Sambhajinagar, Maharashtra - 431010</Typography>
+            <Typography sx={{ mt: 1 }}>Phone:</Typography>
+            <Typography>Rutuja B. Bhosle         +91 93736 75683</Typography>
+            <Typography>Sanjana S. Nikam       +91 84858 34335</Typography>
             <Typography>Email: sajhathali@gmail.com</Typography>
           </Paper>
         </Box>
